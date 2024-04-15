@@ -29,7 +29,7 @@ def convert_np_to_python(data):
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = GVAE().to(device)
 
-checkpoint = torch.load('/Users/avaneeshparasnis/Desktop/TPSP Website/checkpoint.pth.tar', map_location=device)
+checkpoint = torch.load('checkpoint.pth.tar', map_location=device)
 
 # Assuming the model's state dictionary is stored under 'model_state_dict'
 model_state_dict = checkpoint['model_state_dict']
